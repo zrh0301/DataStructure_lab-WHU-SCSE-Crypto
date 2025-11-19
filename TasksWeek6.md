@@ -147,9 +147,9 @@ public:
 class MedianFinder {
 public:
     MedianFinder() {
-        
+
     }
-    
+
     void addNum(int num) {
         if(queMax.empty() or num <= queMax.top()) queMax.push(num);
         else queMin.push(num);
@@ -163,7 +163,7 @@ public:
             queMax.pop();
         }
     }
-    
+
     double findMedian() {
         if(queMax.size() == queMin.size()) return (queMax.top()+queMin.top())/2.0;
         return queMax.top();
